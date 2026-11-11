@@ -1,0 +1,175 @@
+/*  Tabs */
+.tabBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 58px;
+  
+}
+.doubleTabBar{
+    justify-content: space-between;
+}
+.tab {
+  padding: 10px 20px;
+  border-radius: 9999px;
+  background: transparent;
+  border: 1.5px solid #e5e7eb;
+  color: #222222;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  background: #f3f4f6;
+}
+
+.tab.active {
+  background: var(--text-secondary);
+  border-color: var(--text-secondary);
+/*   color: white; */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 525px;
+    justify-content: space-around;
+    background: var(--white);
+    border-radius: 18px;
+    padding: 8px 25px;
+    box-shadow: 0 5px 20px rgba(35, 27, 17, .035);
+    border: 1px solid rgba(228, 220, 208, .6);
+}
+.card:hover{
+    scale: 1.05;
+    transition: all 0.5s ease-out;
+}
+.card h3{
+    font-size: var(--font-h4);
+}
+.card p{
+    line-height: 1.5;
+    color: #625D56;
+    font-weight: 400;
+}
+.topRow{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cat{
+    font-size: 11px;
+    color: var( --text-secondary);
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+.level{
+    font-size: 11px;
+    font-weight: 800;
+    color: var( --text-secondary);
+    background: #FBF2E6;
+    padding: 5px 14px;
+    border-radius: 999px;
+}
+.featuresList{
+    padding-left: 18px;
+    margin: 0;
+    color: #625D56;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.learnMoreBtn{
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    background: var(--text-secondary);
+    color: var(--text-primary);
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+        cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .card{
+        height: 625px;
+        
+    }
+    .learnMoreBtn{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+  .tabBar {
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+  
+  }
+  
+}
+@media (max-width: 996px) {
+    .card{
+        height: 675px;
+    }
+  
+}
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .card{
+        height: 525px;
+    }
+  
+}
+@media (max-width: 768px) {
+  
+}
+
+@media (max-width: 640px) {
+  .tab {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+  .tabBar {
+    gap: 6px;
+  
+  }
+  
+}
+@media (max-width: 576px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .card{
+        justify-content: center;
+        gap: 35px;
+        height: fit-content;
+        padding:21px;
+    }
+    .learnMoreBtn{
+        padding: 15px 20px;
+    }
+}

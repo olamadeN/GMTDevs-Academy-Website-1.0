@@ -1,0 +1,10 @@
+.container{
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+}
+.double{
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}

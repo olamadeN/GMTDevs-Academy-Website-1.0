@@ -1,0 +1,66 @@
+.container{
+    width: 100%;
+    height: 748px;
+    background-image: url('/images/academySectionBg.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    /* overflow: hidden; */
+}
+.contInner{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.textPack{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-self: center;
+
+}
+.textPack div:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.textPack div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.textPack div:nth-child(2) h2{
+    font-size: var(--font-h1);
+    line-height: 1.3333;
+}
+.textPack div:nth-child(2) p{
+   line-height: 28px;
+}
+
+@media (max-width: 1400px) {
+
+
+}
+@media (max-width: 1200px) {
+    .textPack{
+        width: 60%;
+        gap: 40px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .textPack{
+        width: 75%;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .textPack{
+        width: 100%;
+        gap: 30px;
+    }
+}

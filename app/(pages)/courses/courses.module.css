@@ -1,0 +1,77 @@
+.double{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:40px;
+  width: 100%;
+  margin-top:24px ;
+  overflow: hidden;
+}
+.double .headerContent{
+  display:flex;
+  width: 95%;
+  flex-direction: column;
+  justify-content: center;
+/*   gap:15px; */
+  height: auto;
+}
+.double p{
+  align-self: center;
+}
+.double img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 24px;
+}
+.cardGrid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.row1{
+  gap: 12px;
+}
+
+@media (max-width: 1400px) {
+ 
+}
+@media (max-width: 1200px) {
+  .aboutCard1{
+    padding: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .double{
+    gap:15px;
+  }
+  .cardGrid{
+    gap: 15px;
+  }
+  .row1{
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+}
+@media (max-width: 768px) {
+    .double{
+    gap:15px;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 638px) {
+  .row1{
+    grid-template-columns: 1fr !important;
+    gap: 8px;
+  }
+  .aboutCard1{
+    padding: 20px;
+  }
+  .aboutCard1 P:nth-child(2) {
+    margin: 20px 0 10px 0;
+  }
+
+}
+@media (max-width: 576px) {
+    
+}
