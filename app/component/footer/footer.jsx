@@ -19,7 +19,7 @@ const Footer = () => {
                     <div className={styles.item2}>
                         <p className={styles.itemHeader}>QUICK LINKS</p>
                         <ul className={`${styles.itemContacts} ${styles.item2Contacts}`}>
-                            <a href="/About-us"><li>About us</li></a>
+                            <a href="/about-us"><li>About us</li></a>
                             <a href="/courses"><li>Our courses</li></a>
                             <a href="/partnership"><li>Explore partnership</li></a>
                             <a href="/courses#contact"><li>Contact us</li></a>

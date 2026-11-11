@@ -10,7 +10,7 @@ import styles from './navbar.module.css';
 
 const links = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/About-us' },
+  { label: 'About Us', href: '/about-us' },
   { label: 'Courses', href: '/courses' },
   { label: 'Partnership', href: '/partnership' },
   { label: 'Contact us', href: '/courses#contact' },
