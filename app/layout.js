@@ -25,7 +25,7 @@ export const metadata = {
     url: "/",
     images: [
       {
-        url: "/images/logo2.png",
+        url: "/academy-og.png",
         width: 1200,
         height: 630,
         alt: "GMTDevs Academy - Live Technology Training",
@@ -45,9 +45,13 @@ export const metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" }
+    ],
+    apple: "/apple-touch-icon.png"
+  }
+
 };
 
 

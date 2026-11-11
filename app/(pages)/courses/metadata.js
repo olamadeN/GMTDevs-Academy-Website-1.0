@@ -18,7 +18,7 @@ export const metadata = {
     url: "/courses",
     images: [
       {
-        url: "/images/logo2.png",
+        url: "/academy-og.png",
         width: 1200,
         height: 630,
         alt: "GMTDevs Academy Technology Courses",

@@ -18,7 +18,7 @@ export const metadata = {
     url: "/About-us",
     images: [
       {
-        url: "/images/logo2.png",
+        url: "/academy-og.png",
         width: 1200,
         height: 630,
         alt: "About GMTDevs Academy",
