@@ -1,7 +1,8 @@
 
 import Navbar from '@/app/component/navbar/page';
 export { metadata } from "./metadata";
-import styles from '@/app/(pages)/about-us/about.module.css';
+/* import styles from '@/app/(pages)/about-us/about.module.css'; */
+import styles from '../courses/courses.module.css';
 import cStyle from '../courses/courses.module.css';
 import imStyles from '../../page.module.css';
 import { BriefcasePlus, CirclePile, Grid3x3, HeartHandshake, MoveRight, School, UserRoundGroup, UserStar } from 'lucide-react';
