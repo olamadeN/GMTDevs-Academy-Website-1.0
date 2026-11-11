@@ -193,5 +193,7 @@
 }
 
 @media (max-width: 480px) {
-
+    .btnPack{ 
+        display: hidden;
+    }
 }
