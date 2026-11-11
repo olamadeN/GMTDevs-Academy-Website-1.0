@@ -7,7 +7,6 @@ import { BriefcasePlus, CirclePile, GraphHub, MoveRight, UserRoundGroup, UsersRo
 import AcademySection from '@/app/component/academySection/academy';
 import Link from 'next/link';
 import SlideUp from '@/app/component/animations/slideUp';
-import SlideInRight from '@/app/component/animations/slideRight';
 const About = () => {
     return ( 
         <div className={styles.aboutCont}>

@@ -5,7 +5,6 @@ import styles from '../about-us/about.module.css';
 import imStyles from '../../page.module.css';
 import cStyle from './courses.module.css';
 import SlideUp from '@/app/component/animations/slideUp';
-import SlideInRight from '@/app/component/animations/slideRight';
 import CourseTabs from '@/app/component/tabs/page';
 import { BriefcasePlus, CirclePile, UserRoundGroup, UserStar } from 'lucide-react';
 import Contact from '@/app/component/contact/page';

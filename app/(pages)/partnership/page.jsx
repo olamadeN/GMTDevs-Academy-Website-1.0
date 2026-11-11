@@ -4,12 +4,10 @@ export { metadata } from "./metadata";
 import styles from '../about-us/about.module.css';
 import cStyle from '../courses/courses.module.css';
 import imStyles from '../../page.module.css';
-import { BriefcasePlus, CirclePile, GraphHub, Grid3x3, HeartHandshake, MoveRight, School, UserRoundGroup, UsersRoundCollaboration, UserStar } from 'lucide-react';
-import AcademySection from '@/app/component/academySection/academy';
+import { BriefcasePlus, CirclePile, Grid3x3, HeartHandshake, MoveRight, School, UserRoundGroup, UserStar } from 'lucide-react';
 import Link from 'next/link';
 import SlideUp from '@/app/component/animations/slideUp';
-import SlideInRight from '@/app/component/animations/slideRight';
-import Contact from '@/app/component/contact/page';
+
 import PartnershipContact from '@/app/component/Partnershipcontact/page';
 const Partnership = () => {
     return ( 
