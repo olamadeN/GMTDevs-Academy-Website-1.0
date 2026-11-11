@@ -11,6 +11,7 @@ const inter = Inter({
 
 
 export const metadata = {
+  metadataBase: new URL("https://academy.gmtdevs.com"),
   title: "GMTDevs Academy - Live Technology Training",
   description:
     "Build practical technology skills with GMTDevs Academy. Learn frontend development, backend development, and UI/UX design through live, instructor-led online classes, small cohorts, and practical projects.",

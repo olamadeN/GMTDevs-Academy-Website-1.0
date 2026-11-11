@@ -1,7 +1,7 @@
 
 import Navbar from '@/app/component/navbar/page';
 export { metadata } from "./metadata";
-import styles from '../About-us/about.module.css';
+import styles from '../about-us/about.module.css';
 import imStyles from '../../page.module.css';
 import cStyle from './courses.module.css';
 import SlideUp from '@/app/component/animations/slideUp';
