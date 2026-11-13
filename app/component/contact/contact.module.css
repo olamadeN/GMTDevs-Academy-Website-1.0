@@ -45,6 +45,7 @@
     border: 1px solid #D0CECE;
     border-radius: 12px;
     outline: #D0CECE;
+    font-family: var(--font-body);
 }
 .select:active{
     border: 1px solid #D0CECE;
@@ -67,4 +68,21 @@
     font-size: 13px;
     border: 1px solid var(--text-secondary);
     transition: .2s;
+}
+
+@media (max-width: 576px) {
+    .right form input::placeholder{
+        font-size: 13px;
+    }
+    .right form textarea::placeholder{
+        font-size: 13px;
+    }
+    .select :global(.select__placeholder) {
+        font-weight: 500;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+
 }

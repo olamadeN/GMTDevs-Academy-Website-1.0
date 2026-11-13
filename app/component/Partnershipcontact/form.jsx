@@ -65,9 +65,9 @@ const PartnershipForm = () => {
             </div>
             <div className={styles.double}>
                 <input type="email" name="email" id="email" placeholder='you@example.com' />
-                <Select styles={{control: (baseStyles, state) => ({ ...baseStyles, border: state.isFocused ? "#f4eee5" : "none", fontSize:"16px"})}} placeholder="Select organisation type" inputId="contact-organisation" className={styles.select} options={orgType} value={selectedOrg} onChange={setSelectedOrg} isDisabled={sending} isClearable />
+                <Select styles={{control: (baseStyles, state) => ({ ...baseStyles, border: state.isFocused ? "#f4eee5" : "none", fontSize:"16px"})}} placeholder="Select organisation type" inputId="contact-organisation" className={styles.select} classNamePrefix="select" options={orgType} value={selectedOrg} onChange={setSelectedOrg} isDisabled={sending} isClearable />
             </div>
-            <Select styles={{control: (baseStyles, state) => ({ ...baseStyles, border: state.isFocused ? "#f4eee5" : "none", fontSize:"16px"})}} placeholder="Select area of interest" inputId="contact-interest" className={styles.select} options={interest} value={selectedInterest} onChange={setSelectedInterest} isDisabled={sending} isClearable />
+            <Select styles={{control: (baseStyles, state) => ({ ...baseStyles, border: state.isFocused ? "#f4eee5" : "none", fontSize:"16px"})}} placeholder="Select area of interest" inputId="contact-interest" className={styles.select} classNamePrefix="select" options={interest} value={selectedInterest} onChange={setSelectedInterest} isDisabled={sending} isClearable />
             <textarea name="goals" id="" placeholder='Describe your target audience, goals and any requirements...'></textarea>
             <button type='submit' className={styles.btn}>Send partnership enquiry →</button>
             {feedback && <p role="status" aria-live="polite" className={`${styles.feedback} ${styles[feedback.type]}`}>

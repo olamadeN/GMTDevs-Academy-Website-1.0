@@ -193,7 +193,7 @@
 }
 
 @media (max-width: 480px) {
-    .btnPack{ 
-        display: hidden;
+    .btnPack div{ 
+        font-size: 12px;
     }
 }

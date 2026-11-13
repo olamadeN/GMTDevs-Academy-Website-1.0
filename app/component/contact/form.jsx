@@ -61,8 +61,8 @@ const Form = () => {
                 <input type="email" name="email" id="email" placeholder='you@example.com' />
             </div>
             <div className={styles.double}>
-                <Select styles={{control: (baseStyles, state) => ({ ...baseStyles, border: state.isFocused ? "#f4eee5" : "none", fontSize:"16px"})}} placeholder="Choose a discipline" inputId="contact-discipline" instanceId="contact-discipline" className={styles.select} options={discipline} value={selectedDiscipline} onChange={setSelectedDiscipline} isDisabled={sending} isClearable />
-                <Select styles={{control: (baseStyles, state) => ({ ...baseStyles, border: state.isFocused ? "#f4eee5" : "none", fontSize:"16px"})}} placeholder="Select a pathway" inputId="contact-pathway" instanceId="contact-pathway" className={styles.select} options={level} value={selectedLevel} onChange={setSelectedLevel} isDisabled={sending} isClearable />
+                <Select styles={{control: (baseStyles, state) => ({ ...baseStyles, border: state.isFocused ? "#f4eee5" : "none", })}} placeholder="Choose a discipline" inputId="contact-discipline" instanceId="contact-discipline" className={styles.select} options={discipline} value={selectedDiscipline} classNamePrefix="select" onChange={setSelectedDiscipline} isDisabled={sending} isClearable />
+                <Select styles={{control: (baseStyles, state) => ({ ...baseStyles, border: state.isFocused ? "#f4eee5" : "none", })}} placeholder="Select a pathway" inputId="contact-pathway" instanceId="contact-pathway" className={styles.select} options={level} value={selectedLevel} classNamePrefix="select" onChange={setSelectedLevel} isDisabled={sending} isClearable />
             </div>
             <textarea name="goals" id="" placeholder='Share a little about your goals...'></textarea>
             <button type='submit' disabled={sending} className={styles.btn}>
