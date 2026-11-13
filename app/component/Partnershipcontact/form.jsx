@@ -32,7 +32,7 @@ const PartnershipForm = () => {
                 body: JSON.stringify(payload),
             });
             const result = await response.json();
-            if (!response.ok) throw new Error(result.error || "Unable to send your message. Please try again.");
+            if (!response.ok) throw new Error(result.error, result.message || "Unable to send your message. Please try again.");
             setFeedback({ type: result.acknowledged ? "success" : "warning", message: result.message });
             form.reset();
             setSelectedOrg(null);

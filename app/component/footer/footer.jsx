@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={styles.copyRight}>
-                    <p>Copyright © 2026 GMTDevs. All Rights Reserved</p>
+                    <p>Copyright © 2026 GMTDevs Global. All Rights Reserved</p>
                 </div>
             </div>
         </footer>

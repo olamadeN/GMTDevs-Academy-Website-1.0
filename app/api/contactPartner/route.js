@@ -29,12 +29,13 @@ export async function POST(request) {
     const name = typeof data.yourName === "string" ? data.yourName.trim() : "";
     const email = typeof data.email === "string" ? data.email.trim() : "";
     const interest = typeof data.interest === "string" ? data.interest.trim() : "";
-    const orgtype = typeof data.orgtype === "string" ? data.orgtype.trim() : "";
+    const orgtype = typeof data.orgType === "string" ? data.orgType.trim() : "";
+    const orgname = typeof data.orgName === "string" ? data.orgName.trim() : "";
     const details = typeof data.details === "string" ? data.details.trim() : "";
 
-    if (!name || name.length > 120 || !EMAIL.test(email) || email.length > 254 ||
+    if (!name || name.length > 120 || !orgname || orgname.length > 120 || !EMAIL.test(email) || email.length > 254 ||
         !INTREST.has(interest) || !ORGTYPE.has(orgtype) || !details || details.length > 10000) {
-        return Response.json({ error: "Please enter a valid name, email address and message." }, { status: 400 });
+        return Response.json({ error: "Please provide a valid name, email address, organisation type, area of interest and message." }, { status: 400 });
     }
 
     const SMTP_HOST = process.env.SMTP_HOST;
@@ -55,12 +56,16 @@ export async function POST(request) {
 
     const transporter = nodemailer.createTransport({
         host: SMTP_HOST,
-        port,
-        secure: port === 465,
-        auth: { user: SMTP_USER, pass: SMTP_PASSWORD },
-        connectionTimeout: 12000,
-        greetingTimeout: 12000,
-        socketTimeout: 15000,
+        port: 587,
+        secure: false,
+        requireTLS: true,
+        auth: {
+            user: SMTP_USER,
+            pass: SMTP_PASSWORD,
+        },
+        connectionTimeout: 20000,
+        greetingTimeout: 20000,
+        socketTimeout: 30000,
     });
     const from = `GMTDevs Academy <${SMTP_FROM_EMAIL}>`;
 
@@ -71,12 +76,23 @@ export async function POST(request) {
             to: CONTACT_TO_EMAIL,
             replyTo: email,
             subject: `GMTDevs Academy enquiry`,
-            text: `New website enquiry\n\nName: ${name}\nEmail: ${email}\nInterest: ${interest || "Not specified"}\nOrgtype: ${orgtype || "Not specified"}\n\nMessage:\n${details}`,
-            html: `<h2>GMTDevs Academy Partnership Enquiry</h2><p><strong>Name:</strong> ${htmlEscape(name)}</p><p><strong>Email:</strong> ${htmlEscape(email)}</p><p><strong>Interest:</strong> ${htmlEscape(interest || "Not specified")}</p><p><strong>Orgtype:</strong> ${htmlEscape(orgtype || "Not specified")}</p><p><strong>Message:</strong></p><p style="white-space:pre-wrap">${htmlEscape(details)}</p>`,
+            text: `New website enquiry\n\nName: ${name}\nOrgName: ${orgname}\nEmail: ${email}\nInterest: ${interest || "Not specified"}\nOrgtype: ${orgtype || "Not specified"}\n\nMessage:\n${details}`,
+            html: `<h2>GMTDevs Academy Partnership Enquiry</h2><p><strong>Name:</strong> ${htmlEscape(name)}</p><p><strong>OrganisationName:</strong> ${htmlEscape(orgname || "not specified")}</p><p><strong>Email:</strong> ${htmlEscape(email)}</p><p><strong>Interest:</strong> ${htmlEscape(interest || "Not specified")}</p><p><strong>Orgtype:</strong> ${htmlEscape(orgtype || "Not specified")}</p><p><strong>Message:</strong></p><p style="white-space:pre-wrap">${htmlEscape(details)}</p>`,
         });
     } catch (error) {
-        console.error("Contact notification email failed:", error);
-        return Response.json({ error: "Your message could not be sent. Please try again or email us directly." }, { status: 502 });
+        console.error("Contact notification email failed:", {
+            message: error.message,
+            code: error.code,
+            command: error.command,
+            response: error.response,
+            responseCode: error.responseCode,
+        });
+
+        return Response.json({
+            error: "Your message could not be sent. Please try again or email us directly."
+        }, { status: 502 });
+        /* console.error("Contact notification email failed:", error);
+        return Response.json({ error: "Your message could not be sent. Please try again or email us directly." }, { status: 502 }); */
     }
 
     try {

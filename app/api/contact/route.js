@@ -55,12 +55,16 @@ export async function POST(request) {
 
     const transporter = nodemailer.createTransport({
         host: SMTP_HOST,
-        port,
-        secure: port === 465,
-        auth: { user: SMTP_USER, pass: SMTP_PASSWORD },
-        connectionTimeout: 12000,
-        greetingTimeout: 12000,
-        socketTimeout: 15000,
+        port: 587,
+        secure: false,
+        requireTLS: true,
+        auth: {
+            user: SMTP_USER,
+            pass: SMTP_PASSWORD,
+        },
+        connectionTimeout: 20000,
+        greetingTimeout: 20000,
+        socketTimeout: 30000,
     });
     const from = `GMTDevs Academy <${SMTP_FROM_EMAIL}>`;
 
